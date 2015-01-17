@@ -1,6 +1,12 @@
 <div id="container">
 <!-- Your code here -->
   <div ng-include="'../assets/navigation.html'"></div>
+
+  <form novalidate ng-submit="addLink(link.url)">
+    Enter Url: <input type="url" ng-model="link.url" />
+    <button>Save</button>
+  </form>
+
 </div>
 
 
