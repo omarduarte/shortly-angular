@@ -1,20 +1,14 @@
-angular.module('shortly.links', [])
-
+angular.module('shortly.links', ['shortly.services'])
 .controller('LinksController', function ($scope, Links) {
   // Your code here
   $scope.data = {};
+
   $scope.getLinks = function() {
-     Links.then(function(data) {
-      $scope.data.links = data;
+    Links.get().then(function(resp) {
+      $scope.data.links = resp.data;
     });
   };
 
   $scope.getLinks();
 
-})
-.factory('Links', function($http) {
-  return $http.get("/api/links")
-  .then(function(resp) {
-    return resp.data;
-  });
 });
