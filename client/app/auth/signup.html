@@ -1,9 +1,10 @@
 <div id='signup'>
   <h1>signup</h1>
   <form name="signupForm" ng-submit='signup()'>
-    <input type='text' ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
-    <button>signup</button>
+    <input name="username" type='text' required ng-model='user.username' ng-pattern="/^[a-z0-9]{3,20}$/i">
+    <input type="password" required ng-model='user.password'>
+    <button ng-disabled="signupForm.username.$error.pattern">signup</button>
   </form>
+    <div ng-show="signupForm.username.$error.pattern">Usernames must contain between 3 and 20. Only letters and numbers allowed.</div>
   <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
 </div>

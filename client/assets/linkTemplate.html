@@ -1,0 +1,11 @@
+
+<div class="link" ng-repeat="link in data.links">
+  <div class="visits">
+    <div class="count"> {{link.visits}} </div>
+    Visits
+  </div>
+  <img src="../assets/redirect_icon.png"></img>
+  <a href="{{ link.base_url }}/{{link.code}}" class="title"> {{link.title}}</a>
+  <div class="original"> {{ link.url }} </div>
+  <a href="{{ link.base_url }}/{{link.code}}"> {{ link.base_url }}/{{link.code}} </a>
+</div>

@@ -6,6 +6,9 @@
     Enter Url: <input type="url" ng-model="link.url" />
     <button>Save</button>
   </form>
+  <div ng-show="invalidURL" class="error">Invalid URL</div>
+
+  <div ng-include="'../assets/linkTemplate.html'"></div>
 
 </div>
 
