@@ -1,6 +1,10 @@
 <div id="container">
   <!-- Your html here -->
   <div ng-include="'../assets/navigation.html'"></div>
+  <form class="form-inline">
+      <input ng-model="search" type="text"
+        placeholder="Filter by" autofocus>
+  </form>
   <div ng-include="'../assets/linkTemplate.html'"></div>
 
 </div>

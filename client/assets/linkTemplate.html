@@ -1,5 +1,5 @@
 
-<div class="link" ng-repeat="link in data.links | orderBy: '-visits'">
+<div class="link" ng-repeat="link in data.links | filter: search | orderBy: '-visits'">
   <div class="visits">
     <div class="count"> {{link.visits}} </div>
     Visits
